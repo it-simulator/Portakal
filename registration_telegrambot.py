@@ -19,7 +19,7 @@ while True:
     updates = contents.json()
     message = updates['result']
     new_update_id = message[-1]['update_id']
-    print(message.text)
+    
     if new_update_id != update_id:
         update_id = new_update_id
         message_fix = message[-1]['message']
