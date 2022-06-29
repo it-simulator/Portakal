@@ -31,7 +31,9 @@ while True:
            email = message_fix['text']
            regex = re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+')
            if re.fullmatch(regex, email):
-               httpx.get('https://api.telegram.org/bot5424003728:AAGxoRyIhNvKJpoMVm_1cRKbtVyve6BgHhI/sendMessage?chat_id=612970508&text=Адрес эл.почты зарегистрирован') 
+               #httpx.get('https://api.telegram.org/bot5424003728:AAGxoRyIhNvKJpoMVm_1cRKbtVyve6BgHhI/sendMessage?chat_id=612970508&text=Адрес эл.почты зарегистрирован')
+               httpx.get(f"https://api.telegram.org/bot5424003728:AAGxoRyIhNvKJpoMVm_1cRKbtVyve6BgHhI/sendMessage?chat_id={chat_id}&text=Адрес эл.почты зарегистрирован")
            else:
-               httpx.get('https://api.telegram.org/bot5424003728:AAGxoRyIhNvKJpoMVm_1cRKbtVyve6BgHhI/sendMessage?chat_id=612970508&text=Адрес эл.почты не соответствует формату') 
+               #httpx.get('https://api.telegram.org/bot5424003728:AAGxoRyIhNvKJpoMVm_1cRKbtVyve6BgHhI/sendMessage?chat_id=612970508&text=Адрес эл.почты не соответствует формату')
+               httpx.get(f"https://api.telegram.org/bot5424003728:AAGxoRyIhNvKJpoMVm_1cRKbtVyve6BgHhI/sendMessage?chat_id={chat_id}&text=Адрес эл.почты не соответствует формату") 
 time.sleep(1)
